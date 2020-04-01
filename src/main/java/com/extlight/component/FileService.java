@@ -88,7 +88,7 @@ public class FileService {
      * 创建七牛云相关组件
      */
     private void createQiniuComponent() {
-        Configuration cfg = new Configuration(Zone.zone2());
+        Configuration cfg = new Configuration(Zone.zone0());
         UploadManager uploadManager = new UploadManager(cfg);
         Auth auth = Auth.create(commonMap.get("qn_accessKey").toString(), commonMap.get("qn_secretKey").toString());
         BucketManager bucketManager = new BucketManager(auth, cfg);
