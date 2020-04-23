@@ -156,7 +156,7 @@
                             loading(false);
 
                             var body = (uploadIframe.contentWindow ? uploadIframe.contentWindow : uploadIframe.contentDocument).document.body;
-                            var json = (body.innerText) ? body.innerText : ( (body.textContent) ? body.textContent : null);
+                            var json = (body.firstElementChild.innerText) ? body.firstElementChild.innerText : ( (body.textContent) ? body.textContent : null);
 
                             json = (typeof JSON.parse !== "undefined") ? JSON.parse(json) : eval("(" + json + ")");
 
